@@ -642,7 +642,7 @@ def main():
         asyncio.run(test())
     else:
         # Run server
-        transport = os.getenv("TRANSPORT", "stdio")
+        transport = os.getenv("TRANSPORT", "sse")
         if transport in ["http", "sse", "streamable-http"]:
             port = int(os.getenv("PORT", "8000"))
             mcp.run(transport=transport, port=port)

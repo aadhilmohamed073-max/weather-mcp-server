@@ -37,11 +37,14 @@ pip install -r requirements.txt
 ### Running the Server
 
 ```bash
-# Run with default STDIO transport
+# Run with default SSE transport (port 8000)
 python weather_server.py
 
 # Run with HTTP transport
 TRANSPORT=http PORT=8000 python weather_server.py
+
+# Run with STDIO transport
+TRANSPORT=stdio python weather_server.py
 
 # Run with FastMCP CLI
 fastmcp run weather_server.py
